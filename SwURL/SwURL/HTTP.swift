@@ -19,3 +19,9 @@ protocol HTTPTask {
 enum HTTPMethod {
     case get, head, post, put, delete, connect, options, trace, patch
 }
+
+func something() {
+    URLSession.shared.dataTask(with: URL(string: "")!) { (data: Data?, response: URLResponse?, error: Error?) in
+        
+    }.resume()
+}
