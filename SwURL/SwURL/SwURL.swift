@@ -9,8 +9,22 @@
 import Foundation
 
 
-class SwURL {
-    static func request(httpMethod: HTTPMethod) {
-        
+
+class SwURL<T> where T: HTTPTask {
+    
+    
+    
+    /**
+        Request takes a HTTPTask to perform a request.
+     */
+    
+    static func request(task: T, completion: (() -> Void)?) {
+        guard let url = URL(string: "\(task.baseURL)\(task.path)") else {
+            return
+        }
+        let request = URLRequest(url: url, cachePolicy: task.cachePolicy, timeoutInterval: task.timeoutInterval)
+        URLSession.shared.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+            
+        }.resume()
     }
 }
