@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <FileRef
+      location = "group:SwURL/SwURL.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CommandLine/CommandLine.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Github/Github.xcodeproj">
+   </FileRef>
 </Workspace>

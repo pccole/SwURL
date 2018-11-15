@@ -11,9 +11,6 @@ import Foundation
 
 
 class SwURL<T> where T: HTTPTask {
-    
-    
-    
     /**
         Request takes a HTTPTask to perform a request.
      */
