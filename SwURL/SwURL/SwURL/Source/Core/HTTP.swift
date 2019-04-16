@@ -8,9 +8,8 @@
 
 import Foundation
 
-public protocol URLString {
-    
-}
+public typealias Parameters = [String: Any]
+public typealias Headers = Parameters
 
 public protocol HTTPTask {
     var baseURL: String { get }

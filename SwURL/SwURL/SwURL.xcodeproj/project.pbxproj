@@ -11,9 +11,10 @@
 		94C01F38219D127700E5123B /* SwURLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C01F37219D127700E5123B /* SwURLTests.swift */; };
 		94C01F3A219D127700E5123B /* SwURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 94C01F2C219D127700E5123B /* SwURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		94C01FCF219D13DD00E5123B /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C01FCC219D13DD00E5123B /* HTTP.swift */; };
-		94C01FD0219D13DD00E5123B /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C01FCD219D13DD00E5123B /* Typealias.swift */; };
 		94C01FD1219D13DD00E5123B /* Encoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C01FCE219D13DD00E5123B /* Encoding.swift */; };
 		94C01FD3219D13EC00E5123B /* SwURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C01FD2219D13EC00E5123B /* SwURL.swift */; };
+		94C01FDE219E518000E5123B /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C01FDD219E518000E5123B /* Errors.swift */; };
+		94C01FE5219E59BB00E5123B /* DictionaryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C01FE4219E59BB00E5123B /* DictionaryExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +35,10 @@
 		94C01F37219D127700E5123B /* SwURLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwURLTests.swift; sourceTree = "<group>"; };
 		94C01F39219D127700E5123B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94C01FCC219D13DD00E5123B /* HTTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
-		94C01FCD219D13DD00E5123B /* Typealias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		94C01FCE219D13DD00E5123B /* Encoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encoding.swift; sourceTree = "<group>"; };
 		94C01FD2219D13EC00E5123B /* SwURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwURL.swift; sourceTree = "<group>"; };
+		94C01FDD219E518000E5123B /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		94C01FE4219E59BB00E5123B /* DictionaryExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +81,7 @@
 		94C01F2B219D127700E5123B /* SwURL */ = {
 			isa = PBXGroup;
 			children = (
-				94C01FD2219D13EC00E5123B /* SwURL.swift */,
-				94C01FCB219D139D00E5123B /* Core */,
+				94C01FE0219E533E00E5123B /* Source */,
 				94C01FD4219D13F800E5123B /* SupportFiles */,
 			);
 			path = SwURL;
@@ -100,7 +101,8 @@
 			children = (
 				94C01FCE219D13DD00E5123B /* Encoding.swift */,
 				94C01FCC219D13DD00E5123B /* HTTP.swift */,
-				94C01FCD219D13DD00E5123B /* Typealias.swift */,
+				94C01FDD219E518000E5123B /* Errors.swift */,
+				94C01FE3219E538100E5123B /* Extensions */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -112,6 +114,23 @@
 				94C01F2C219D127700E5123B /* SwURL.h */,
 			);
 			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		94C01FE0219E533E00E5123B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				94C01FD2219D13EC00E5123B /* SwURL.swift */,
+				94C01FCB219D139D00E5123B /* Core */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		94C01FE3219E538100E5123B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				94C01FE4219E59BB00E5123B /* DictionaryExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,10 +195,11 @@
 				TargetAttributes = {
 					94C01F28219D127700E5123B = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 					};
 					94C01F31219D127700E5123B = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -189,6 +209,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 94C01F1F219D127700E5123B;
 			productRefGroup = 94C01F2A219D127700E5123B /* Products */;
@@ -224,9 +245,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				94C01FD1219D13DD00E5123B /* Encoding.swift in Sources */,
-				94C01FD0219D13DD00E5123B /* Typealias.swift in Sources */,
+				94C01FDE219E518000E5123B /* Errors.swift in Sources */,
 				94C01FCF219D13DD00E5123B /* HTTP.swift in Sources */,
 				94C01FD3219D13EC00E5123B /* SwURL.swift in Sources */,
+				94C01FE5219E59BB00E5123B /* DictionaryExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +415,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -419,7 +441,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.philcole.SwURL;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -438,7 +460,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.philcole.SwURLTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -457,7 +479,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.philcole.SwURLTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
